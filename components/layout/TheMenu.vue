@@ -4,7 +4,7 @@ import {MENU_DATA} from "~/components/layout/menu.data";
 
 <template>
   <div>
-    <nuxt-link v-for="item in MENU_DATA" :key="item.url" :to="item.url" class="flex items-center text-white py-1 px-3 rounded-lg w-full hover:bg-gray-700 hover:shadow transition-all mb-2.5">
+    <nuxt-link v-for="item in MENU_DATA" :key="item.url" :to="item.url" class="flex items-center text-nowrap py-1 px-3 rounded-lg w-full hover:bg-gray-700 hover:shadow transition-all mb-2.5">
         <Icon :name="item.icon" class="mr-3"/>
         <span>{{ item.name }}</span>
     </nuxt-link>

@@ -1,9 +1,25 @@
-<script setup>
-console.log('loaded')
+<script setup lang="ts">
+import { account } from '~/lib/appwrite';
+
+const router = useRouter()
+const loaderStore = useLoaderStore()
+const auth = useAuthStore()
+
+onMounted(async () => {
+  try {
+    const user = await account.get()
+    if (user) auth.set(user)
+  } catch {
+    router.push('/login')
+  } finally {
+    loaderStore.setLoading(false)
+  }
+})
 </script>
 
 <template>
-  <section class="grid" style="min-height: 100vh;">
+  <LayoutTheLoader v-if="loaderStore.setLoading"/>
+  <section v-else :class="{grid : auth.isAuth}" style="min-height: 100vh;">
     <LayoutTheSidebar /> 
     <div>
         <slot />

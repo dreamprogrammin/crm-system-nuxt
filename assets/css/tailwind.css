@@ -35,7 +35,6 @@
 		--ring: #202937;
 
 		--radius: 0.5rem;
-    --text-foreground: #fff;
   }
 }
 
@@ -44,6 +43,6 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground text-base;
+    @apply bg-background text-primary-foreground text-base;
   }
 }

@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <aside class="px-5 py-8 h-full relative w-full h-full">
+  <aside class="px-5 py-8 h-full relative w-full h-full bg-sidebar">
     <nuxt-link to="/" class="mb-10 block">
         <NuxtPicture src="logo.svg" width="120px" class="mx-auto"/>
     </nuxt-link> 

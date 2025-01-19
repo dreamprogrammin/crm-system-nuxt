@@ -16,8 +16,12 @@ export default defineNuxtConfig({
     }
   }],
     '@nuxt/icon',
+    '@pinia/nuxt'
   ],
   shadcn: { prefix: 'Ui', componentDir: './components/ui' },
+  pinia: {
+    storesDirs: ['./stores/**', './custom-folder/stores/**'],
+  },
   runtimeConfig : {
     public : {
       APP_DATA_ID : process.env.APP_DATA_ID
